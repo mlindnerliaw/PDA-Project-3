@@ -413,7 +413,7 @@ beta.plot1 <- ggplot(data = vary_beta1, aes(x = g, y=variance, color=factor(beta
     x = "Number of Clusters (g)",
     y = "Variance") +
   theme_minimal() +
-  scale_color_manual(name="Alpha",values=c("0.5"="orange", "2"="green", "10"="blue","optimal (g,r)"="red"))+
+  scale_color_manual(name="Beta",values=c("0.5"="orange", "2"="green", "10"="blue","optimal (g,r)"="red"))+
   theme(legend.position = "bottom")
 #beta.plot1
 
@@ -476,7 +476,7 @@ beta.plot2 <- ggplot(data = vary_beta2, aes(x = g, y=variance, color=factor(beta
     x = "Number of Clusters (g)",
     y = "Variance") +
   theme_minimal() +
-  scale_color_manual(name="Alpha",values=c("0.5"="orange", "2"="green", "10"="blue","optimal (g,r)"="red"))+
+  scale_color_manual(name="Beta",values=c("0.5"="orange", "2"="green", "10"="blue","optimal (g,r)"="red"))+
   theme(legend.position = "bottom")
 #beta.plot1
 
@@ -485,15 +485,15 @@ grid.arrange(gamma.plot2, alpha.plot2, beta.plot2, nrow=2)
 
 
 
-```{r}
+```{r, fig.height=6, fig.width=8}
 gamma.plot3 <- ggplot(data = vary_gamma3, aes(x = g, y=variance, color=factor(round(gamma, digits=2)))) +
   geom_line()+
   geom_point(data=opt_gamma[opt_gamma$c2==5,], aes(x=g, y=variance, color="optimal (g,r)"))+
-  annotate("text", 4, .009, label=paste0("(",as.character(opt_gamma$g[7]),",", as.character(opt_gamma$r[7]), ")"), 
+  annotate("text", 4, -.015, label=paste0("(",as.character(opt_gamma$g[7]),",", as.character(opt_gamma$r[7]), ")"), 
            color="red", size=3)+
-  annotate("text", 6, .045, label=paste0("(",as.character(opt_gamma$g[8]),",", as.character(opt_gamma$r[8]), ")"), 
+  annotate("text", 6, .1, label=paste0("(",as.character(opt_gamma$g[8]),",", as.character(opt_gamma$r[8]), ")"), 
            color="red", size=3)+
-  annotate("text", 10, .005, label=paste0("(",as.character(opt_gamma$g[9]),",", as.character(opt_gamma$r[9]), ")"), 
+  annotate("text", 10, -.015, label=paste0("(",as.character(opt_gamma$g[9]),",", as.character(opt_gamma$r[9]), ")"), 
            color="red", size=3)+
   labs(
     title = "Varying Gamma",
@@ -535,7 +535,7 @@ beta.plot3 <- ggplot(data = vary_beta3, aes(x = g, y=variance, color=factor(beta
     x = "Number of Clusters (g)",
     y = "Variance") +
   theme_minimal() +
-  scale_color_manual(name="Alpha",values=c("0.5"="orange", "2"="green", "10"="blue","optimal (g,r)"="red"))+
+  scale_color_manual(name="Beta",values=c("0.5"="orange", "2"="green", "10"="blue","optimal (g,r)"="red"))+
   theme(legend.position = "bottom")
 #beta.plot3
 
@@ -671,7 +671,7 @@ beta.plot4 <- ggplot(data = vary_beta4, aes(x = g, y=variance, color=factor(beta
     x = "Number of Clusters (g)",
     y = "Variance") +
   theme_minimal() +
-  scale_color_manual(name="Alpha",values=c("0.5"="orange", "2"="green", "10"="blue","optimal (g,r)"="red"))+
+  scale_color_manual(name="Beta",values=c("0.5"="orange", "2"="green", "10"="blue","optimal (g,r)"="red"))+
   theme(legend.position = "bottom")
 #beta.plot4
 
@@ -739,7 +739,7 @@ beta.plot5 <- ggplot(data = vary_beta5, aes(x = g, y=variance, color=factor(beta
     x = "Number of Clusters (g)",
     y = "Variance") +
   theme_minimal() +
-  scale_color_manual(name="Alpha",values=c("0.5"="orange", "2"="green", "10"="blue","optimal (g,r)"="red"))+
+  scale_color_manual(name="Beta",values=c("0.5"="orange", "2"="green", "10"="blue","optimal (g,r)"="red"))+
   theme(legend.position = "bottom")
 #beta.plot5
 
@@ -797,7 +797,7 @@ beta.plot6 <- ggplot(data = vary_beta6, aes(x = g, y=variance, color=factor(beta
     x = "Number of Clusters (g)",
     y = "Variance") +
   theme_minimal() +
-  scale_color_manual(name="Alpha",values=c("0.5"="orange", "2"="green", "10"="blue","optimal (g,r)"="red"))+
+  scale_color_manual(name="Beta",values=c("0.5"="orange", "2"="green", "10"="blue","optimal (g,r)"="red"))+
   theme(legend.position = "bottom")
 #beta.plot6
 
